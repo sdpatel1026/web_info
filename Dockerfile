@@ -14,7 +14,7 @@ RUN poetry install
 
 COPY . .
 # Expose the application port
-EXPOSE 8000
+EXPOSE $PORT
 
 # Run the application
-CMD ["poetry", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["poetry", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", $PORT]
