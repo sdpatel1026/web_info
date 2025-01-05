@@ -42,14 +42,14 @@ Create a .env file in the root directory by taking reference from ```.env.exampl
 poetry run uvicorn src.main:app --port <port>
 ```
 The application will be available at:
-http://127.0.0.1:{port}
+http://127.0.0.1:<port>
 
 ### Testing the API
 You can test the API using tools like Postman or curl.
 - **Sample Request** 
     ```bash
-       curl -X POST "http://127.0.0.1:8000/api/website_infogi"\
-        -H "Authorization: Bearer your_secret_key"\
+       curl -X POST "http://127.0.0.1:8000/api/website_info"\
+        -H "Authorization: Bearer <your_secret_key>"\
         -H "Content-Type: application/json" \
         -d '{"url": "https://www.microsoft.com/"}'     
     ```
