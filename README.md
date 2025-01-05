@@ -53,3 +53,14 @@ You can test the API using tools like Postman or curl.
         -H "Content-Type: application/json" \
         -d '{"url": "https://example.com"}'     
     ```
+
+### Deployment
+#### Docker Deployment
+1. Build the Docker Image:
+    ```bash
+    docker build -t <image_name> .
+    ```
+2. Run the Docker Container:   
+    ```bash
+    docker run -d -p 8000:8000 --env-file .env <image_name>
+    ``` 
