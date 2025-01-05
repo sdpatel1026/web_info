@@ -19,9 +19,9 @@ Ensure the following are installed on your machine:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fastapi-ai-scraper.git
+git clone https://github.com/sdpatel1026/web_info.git
 
-cd fastapi-ai-scraper
+cd web_info
 ```
 ### Creates the virtual environment
 creates the virtual environment and activates it
@@ -48,10 +48,10 @@ http://127.0.0.1:{port}
 You can test the API using tools like Postman or curl.
 - **Sample Request** 
     ```bash
-       curl -X POST "http://127.0.0.1:8000/scrape"\
+       curl -X POST "http://127.0.0.1:8000/api/website_infogi"\
         -H "Authorization: Bearer your_secret_key"\
         -H "Content-Type: application/json" \
-        -d '{"url": "https://example.com"}'     
+        -d '{"url": "https://www.microsoft.com/"}'     
     ```
 
 ### Deployment
@@ -62,5 +62,5 @@ You can test the API using tools like Postman or curl.
     ```
 2. Run the Docker Container:   
     ```bash
-    docker run -d -p 8000:8000 --env-file .env <image_name>
+    docker run -d -p 8000:8000 <image_name>
     ``` 
